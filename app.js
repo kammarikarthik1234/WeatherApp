@@ -3,7 +3,7 @@ const express=require("express");
 const app=express();
 const bodyParser=require("body-parser");
 const https=require("https");
-
+const port=process.env.port || 30000;
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.get("/",function(req,res)
@@ -34,6 +34,6 @@ app.get("/",function(req,res)
 })
    
 
-app.listen(3000,function(){
+app.listen(port,function(){
     console.log("Server is running at port no.3000");
 });
