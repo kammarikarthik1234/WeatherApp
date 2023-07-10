@@ -3,7 +3,7 @@ const express=require("express");
 const app=express();
 const bodyParser=require("body-parser");
 const https=require("https");
-const port=process.env.port || 30000;
+const port=process.env.port || 3000;
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.get("/",function(req,res)
